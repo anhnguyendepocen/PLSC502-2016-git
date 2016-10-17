@@ -83,7 +83,6 @@ print(c(LB,UB))
 
 # Now do that 1000 times:
 
-set.seed(7222009)
 N <- 20
 reps <- 1000
 PI20 <- numeric(reps)
@@ -126,7 +125,6 @@ prop.table(table(ifelse(UB20>popmean & LB20<popmean,1,0)))
 
 # Same thing, increase to N=100:
 
-set.seed(7222009)
 N <- 100
 reps <- 1000
 PI100 <- numeric(reps)
@@ -168,7 +166,6 @@ prop.table(table(ifelse(UB100>popmean & LB100<popmean,1,0)))
 
 # Now N = 400...
 
-set.seed(7222009)
 N <- 400
 reps <- 1000
 PI400 <- numeric(reps)
