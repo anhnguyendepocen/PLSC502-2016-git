@@ -52,7 +52,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 54,White,Protestant,South,Central,Black,Neutral
 56,White,Other,West,Hawaii,Other,Neutral
 57,Asian,Protestant,West,Pacific,White,Insult
-58,White,,West,Pacific,Black,Neutral
 59,White,Protestant,Midwest,Central,White,Neutral
 60,White,Protestant,Midwest,Eastern,White,Neutral
 62,White,Protestant,West,Mountain,Other,Insult
@@ -65,7 +64,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 69,Asian,None,Midwest,Eastern,Black,Insult
 70,White,Catholic,East,Eastern,White,Neutral
 72,White,Jewish,West,Pacific,White,Insult
-73,White,,Midwest,Central,,Neutral
 74,White,Protestant,West,Pacific,White,Neutral
 75,Black,Protestant,South,Central,White,Insult
 76,White,Protestant,South,Central,White,Neutral
@@ -125,7 +123,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 132,White,Protestant,Midwest,Eastern,White,Compliment
 133,White,None,West,Pacific,White,Compliment
 134,Black,Catholic,East,Eastern,White,Neutral
-135,White,,South,Eastern,,Neutral
 137,White,Protestant,South,Central,Black,Insult
 139,Black,None,Midwest,Eastern,White,Neutral
 140,Black,Other,Midwest,Central,White,Compliment
@@ -163,7 +160,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 176,Black,Protestant,West,Mountain,White,Compliment
 178,White,Catholic,Midwest,Central,White,Insult
 179,White,Protestant,South,Central,Black,Insult
-180,Black,,West,Pacific,White,Neutral
 181,Black,Protestant,South,Central,Black,Neutral
 182,Black,Protestant,South,Central,White,Neutral
 183,White,None,South,Central,White,Neutral
@@ -272,7 +268,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 298,Asian,Catholic,Midwest,Central,White,Insult
 299,White,None,South,Central,Black,Neutral
 301,White,Protestant,South,Central,White,Neutral
-302,White,,West,Pacific,White,Compliment
 303,White,Protestant,South,Central,White,Neutral
 304,White,Protestant,West,Mountain,White,Insult
 305,White,Protestant,Midwest,Central,Asian,Neutral
@@ -407,10 +402,8 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 449,White,Catholic,East,Eastern,White,Insult
 450,White,Protestant,Midwest,Eastern,White,Insult
 451,White,Protestant,South,Central,White,Compliment
-452,White,,Midwest,Central,White,Neutral
 453,Black,Catholic,South,Eastern,Black,Insult
 454,White,Protestant,South,Central,Black,Insult
-455,White,,South,Central,White,Neutral
 456,White,Catholic,South,Eastern,White,Neutral
 457,Black,Catholic,East,Eastern,White,Neutral
 458,White,Protestant,Midwest,Central,White,Neutral
@@ -465,7 +458,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 508,Black,Protestant,Midwest,Central,White,Compliment
 509,White,Catholic,South,Central,White,Compliment
 510,White,Protestant,South,Central,White,Neutral
-511,White,Protestant,West,Pacific,,Neutral
 512,White,None,East,Eastern,White,Neutral
 513,Black,Protestant,South,Eastern,White,Neutral
 514,White,Catholic,East,Eastern,White,Neutral
@@ -473,7 +465,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 516,White,Protestant,East,Eastern,Black,Neutral
 517,White,Protestant,South,Central,Black,Neutral
 518,White,Protestant,South,Eastern,White,Insult
-519,Black,,West,Pacific,White,Neutral
 520,Black,None,South,Eastern,White,Insult
 521,White,None,South,Eastern,White,Neutral
 522,White,Catholic,East,Eastern,White,Neutral
@@ -494,7 +485,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 538,Black,Protestant,East,Eastern,White,Neutral
 539,White,None,West,Pacific,Asian,Neutral
 540,White,Protestant,Midwest,Eastern,White,Neutral
-541,White,,Midwest,Central,Black,Insult
 542,White,Catholic,East,Eastern,White,Insult
 543,Black,None,West,Pacific,White,Compliment
 544,Black,Protestant,Midwest,Eastern,White,Neutral
@@ -550,7 +540,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 606,White,Protestant,Midwest,Eastern,White,Neutral
 607,White,Protestant,Midwest,Central,White,Insult
 609,White,Protestant,Midwest,Central,Black,Neutral
-610,White,,West,Mountain,,Neutral
 611,Black,None,Midwest,Eastern,White,Neutral
 612,Black,Protestant,West,Pacific,White,Neutral
 613,White,Other,Midwest,Eastern,White,Insult
@@ -558,7 +547,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 615,Asian,Protestant,West,Pacific,White,Compliment
 616,White,Protestant,South,Eastern,White,Neutral
 617,White,Protestant,South,Eastern,Black,Insult
-618,White,,South,Eastern,White,Neutral
 619,White,Protestant,South,Eastern,White,Compliment
 620,White,Protestant,South,Eastern,White,Neutral
 621,Asian,Protestant,West,Mountain,White,Insult
@@ -658,7 +646,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 725,Black,Protestant,South,Eastern,White,Neutral
 726,Black,Catholic,South,Central,White,Neutral
 727,Black,Protestant,South,Central,White,Neutral
-728,White,,East,Eastern,White,Compliment
 729,Black,None,East,Eastern,White,Insult
 730,Black,Protestant,Midwest,Central,White,Neutral
 732,White,Protestant,South,Eastern,White,Insult
@@ -705,7 +692,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 773,White,None,Midwest,Eastern,Other,Neutral
 774,Black,Protestant,Midwest,Central,White,Neutral
 775,White,Protestant,Midwest,Central,White,Insult
-776,White,Jewish,East,Eastern,,Insult
 777,White,Protestant,South,Eastern,White,Neutral
 778,White,Protestant,West,Mountain,White,Neutral
 780,White,Protestant,East,Eastern,White,Neutral
@@ -736,7 +722,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 809,White,Protestant,Midwest,Central,White,Insult
 810,Black,Protestant,South,Eastern,White,Neutral
 811,Black,Protestant,South,Central,Black,Neutral
-812,White,,South,Eastern,White,Neutral
 814,Black,Protestant,Midwest,Eastern,White,Neutral
 815,Black,Jewish,South,Eastern,White,Insult
 816,White,Protestant,South,Eastern,Black,Insult
@@ -778,13 +763,11 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 857,White,Catholic,Midwest,Central,White,Insult
 858,White,None,South,Central,White,Insult
 860,White,Catholic,South,Central,White,Neutral
-861,White,,West,Pacific,White,Neutral
 862,White,None,East,Eastern,White,Neutral
 863,White,None,South,Eastern,White,Neutral
 864,White,Other,East,Eastern,White,Neutral
 866,White,Protestant,South,Eastern,Black,Neutral
 867,White,Catholic,East,Eastern,Black,Neutral
-868,White,,West,Pacific,Asian,Neutral
 869,Black,Catholic,East,Eastern,White,Neutral
 870,White,Protestant,East,Eastern,White,Insult
 871,White,Protestant,South,Eastern,White,Compliment
@@ -797,7 +780,6 @@ respon,intrace,relgpref,cenreg,timezone,race,feminsult
 878,White,Protestant,South,Eastern,White,Neutral
 879,White,Protestant,South,Central,White,Compliment
 880,Black,None,East,Eastern,White,Neutral
-881,White,,West,Pacific,White,Neutral
 882,White,Catholic,Midwest,Central,Other,Neutral
 883,White,Protestant,Midwest,Central,White,Neutral
 884,White,Protestant,Midwest,Eastern,White,Neutral
