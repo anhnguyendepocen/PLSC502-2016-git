@@ -5,9 +5,36 @@
 #####################################
 # Packages, etc.:
 
-require(RCurl)
+require(RCurl) 
+require(DescTools)
+require(car)
 
 options(digits=5)
+
+# Simulate a bunch of 2x2 crosstabs, calculating gamma
+# and the taus for each, then plot them against each
+# other:
+
+NTs <- 101
+GAMMA <- numeric(NTs)
+TauA<- numeric(NTs)
+TauB<- numeric(NTs)
+TauC<- numeric(NTs)
+
+for (i in 1:NTs) { 
+  ST <- as.table(rbind(c(NTs-i,i-1),c(i-1,NTs-i)))
+  GAMMA[i] <- GoodmanKruskalGamma(ST)
+  TauA[i] <- KendallTauA(ST)
+  TauB[i] <- KendallTauB(ST)
+  TauC[i] <- StuartTauC(ST)
+}
+
+dsts <- data.frame(Gamma=GAMMA,TauA=TauA,TauB=TauB,TauC=TauC)
+
+pdf("GammasAndTaus.pdf",7,7)
+par(mar=c(4,4,2,2))
+scatterplotMatrix(dsts)
+dev.off()
 
 # Get Palin data:
 
@@ -26,65 +53,31 @@ MamaGriz$female <- ordered(MamaGriz$female,levels=c("Male",
 summary(MamaGriz)
 
 palinpid<-with(MamaGriz, xtabs(~palin+pid))
-palinpid
+addmargins(palinpid)
 
-# Gamma2 function:
+# Gamma:
 
-Gamma2.f<-function(x, pr=0.95) 
-{ 
-  # x is a matrix of counts.  You can use output of crosstabs or xtabs in R. 
-  # A matrix of counts can be formed from a data frame by using design.table. 
-  
-  # Confidence interval calculation and output from Greg Rodd 
-  
-  # Check for using S-PLUS and output is from crosstabs (needs >= S-PLUS 6.0) 
-  if(is.null(version$language) && inherits(x, "crosstabs")) { oldClass(x)<-NULL; 
-  attr(x, "marginals")<-NULL} 
-  
-  n <- nrow(x) 
-  m <- ncol(x) 
-  pi.c<-pi.d<-matrix(0,nr=n,nc=m) 
-  
-  row.x<-row(x) 
-  col.x<-col(x) 
-  
-  for(i in 1:(n)){ 
-    for(j in 1:(m)){ 
-      pi.c[i, j]<-sum(x[row.x<i & col.x<j]) + sum(x[row.x>i & col.x>j]) 
-      pi.d[i, j]<-sum(x[row.x<i & col.x>j]) + sum(x[row.x>i & col.x<j]) 
-    } 
-  } 
-  
-  C <- sum(pi.c*x)/2 
-  D <- sum(pi.d*x)/2 
-  
-  psi<-2*(D*pi.c-C*pi.d)/(C+D)^2 
-  sigma2<-sum(x*psi^2)-sum(x*psi)^2 
-  
-  gamma <- (C - D)/(C + D) 
-  pr2 <- 1 - (1 - pr)/2 
-  CIa <- qnorm(pr2) * sqrt(sigma2) * c(-1, 1) + gamma 
-  
-  list(gamma = gamma, C = C, D = D, sigma = sqrt(sigma2), Level = paste( 
-    100 * pr, "%", sep = ""), CI = paste(c("[", max(CIa[1], -1),  
-     ", ", min(CIa[2], 1), "]"), collapse = ""))      
-} 
+GoodmanKruskalGamma(palinpid,conf.level=0.95)
 
-# Gamma for Palin support by Party ID:
+#Tau-A:
 
-Gamma2.f(palinpid)
+KendallTauA(palinpid,conf.level=0.95)
 
-# Kendall's Taus....
-MamaGriz$Palin <- with(MamaGriz, as.integer(palin))
-MamaGriz$PID <- with(MamaGriz, as.integer(pid))
+# Tau-B:
 
-with(MamaGriz, cor.test(PID,Palin,method="kendall"))
+KendallTauB(palinpid,conf.level=0.95)
+
+# Tau-C:
+
+StuartTauC(palinpid,conf.level=0.95)
 
 # Male vs. Female:
 
 palinfemale<-with(MamaGriz, xtabs(~palin+female))
-MamaGriz$Female <- with(MamaGriz, as.integer(female)-1)
 addmargins(palinfemale)
-Gamma2.f(palinfemale)
-with(MamaGriz, cor.test(Female,Palin,method="kendall"))
+
+GoodmanKruskalGamma(palinfemale,conf.level=0.95)
+KendallTauA(palinfemale,conf.level=0.95)
+KendallTauB(palinfemale,conf.level=0.95)
+StuartTauC(palinfemale,conf.level=0.95)
 
