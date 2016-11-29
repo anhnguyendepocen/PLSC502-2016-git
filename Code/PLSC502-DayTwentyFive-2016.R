@@ -66,5 +66,9 @@ lines(density(linlin$residuals),lwd=1,lty=1,col="black")
 lines(density(loglin$residuals),lwd=2,lty=1,col="red")
 lines(density(loglog$residuals),lwd=4,lty=1,col="darkgreen")
 abline(v=0,lty=2,lwd=1)
+legend("topright",bty="n",lwd=2,lty=c(1,2,3,4),
+       col=c("black","red","blue","darkgreen"),
+       legend=c("Untransformed","Logged Y","Logged X",
+                "Both Logged"))
 dev.off()
 
